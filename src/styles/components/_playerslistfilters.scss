@@ -1,0 +1,14 @@
+.players-list-filters {
+    
+    .filter-group {
+        box-sizing: border-box;
+        padding: 15px;
+        float: left;
+        width: 33%;
+    }
+
+    input, select {
+        margin-top: 10px;
+        width: 100%;
+    }
+}

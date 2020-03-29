@@ -1,0 +1,36 @@
+/*      /styles/components/_header.scss     */
+
+.header {
+
+    background: $prim-color;
+    margin-bottom: $size-xl;
+    padding: $size-md;
+    color: white;
+
+    h1 {
+        font-size: $size-lg;
+        margin: 0;
+    }
+
+    h2 {
+        color: $off-white;
+        font-size: $size-md;
+        font-weight: normal;
+        margin: 0;
+    }
+
+    .nav-links {
+        float: right;
+
+        a {
+            color: $off-white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+

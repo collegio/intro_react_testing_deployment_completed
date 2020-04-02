@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the players list no players 1`] = `
+<div
+  className="players-list"
+>
+  <h1>
+    Players List
+  </h1>
+  <p>
+    No players available!
+  </p>
+</div>
+`;
+
+exports[`should render the players list with players 1`] = `
+<div
+  className="players-list"
+>
+  <h1>
+    Players List
+  </h1>
+  <div
+    className="player-list"
+  >
+    <Connect(PlayersListItem)
+      gender="Male"
+      id="1"
+      key="1"
+      message="Just looking to play"
+      name="Sidney Crosby"
+      skill_level="expert"
+      sport_type="hockey"
+    />
+    <Connect(PlayersListItem)
+      gender="Male"
+      id="2"
+      key="2"
+      message="Test test test"
+      name="Lebron James"
+      skill_level="expert"
+      sport_type="basketball"
+    />
+    <Connect(PlayersListItem)
+      gender="Male"
+      id="3"
+      key="3"
+      message="test"
+      name="Drew Brees"
+      skill_level="expert"
+      sport_type="football"
+    />
+    <Connect(PlayersListItem)
+      gender="Female"
+      id="4"
+      key="4"
+      message=""
+      name="Hayley Wickenheiser"
+      skill_level="expert"
+      sport_type="hockey"
+    />
+    <Connect(PlayersListItem)
+      gender="Male"
+      id="5"
+      key="5"
+      message="I'm terrible!"
+      name="Johnny Brees"
+      skill_level="basic"
+      sport_type="basketball"
+    />
+  </div>
+</div>
+`;

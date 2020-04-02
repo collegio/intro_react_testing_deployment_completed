@@ -17,9 +17,9 @@ const store = configStore();
 // store.dispatch(addPlayer({ name: 'Jane Doe', gender: 'Female', skill_level: 'expert', 'message': 'I am here to win.' }));
 // store.dispatch(addPlayer({ name: 'Bill Williamson', sport_type: 'softball', skill_level: 'intermediate', 'message': 'I like to win and have fun!.' }));
 
-axios.get('http://206.189.20.69/')
+axios.get('http://134.122.113.170/')
     .then((res) => {
-        res.data.players.forEach((player) => {
+        res.data.forEach((player) => {
             store.dispatch(addPlayer(player));
         });
     });

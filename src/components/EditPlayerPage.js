@@ -3,23 +3,37 @@ import { connect } from 'react-redux';
 import PlayerForm from './PlayerForm';
 import { editPlayer, removePlayer } from '../actions/players';
 
-const EditPlayerPage = (props) => {
-    return (
-        <div className="container">
-            <h1>Edit Player</h1>
-            <PlayerForm
-                player={props.player}
-                onSubmit={(player => {
-                    props.dispatch(editPlayer(props.player.id, player));
-                    props.history.push('/');
-                })}
-            />
-            <button className="button button-delete" onClick={() => {
-                props.dispatch(removePlayer({ id: props.player.id }));
-                props.history.push('/');
-            }}>Remove</button>
-        </div>
-    );
+export class EditPlayerPage extends React.Component {
+
+    constructor(props) {
+        super(props);
+
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onRemove = this.onRemove.bind(this);
+    }
+
+    onSubmit(player) {
+        this.props.editPlayer(this.props.player.id, player);
+        this.props.history.push('/');
+    }
+
+    onRemove() {
+        this.props.removePlayer({ id: this.props.player.id });
+        this.props.history.push('/');
+    }
+
+    render() {
+        return (
+            <div className="container">
+                <h1>Edit Player</h1>
+                <PlayerForm
+                    player={this.props.player}
+                    onSubmit={this.onSubmit}
+                />
+                <button className="button button-delete" onClick={this.onRemove}>Remove</button>
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = (state, props) => {
@@ -28,4 +42,9 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-export default connect(mapStateToProps)(EditPlayerPage);
+const mapDispatchToProps = (dispatch, props) => ({
+    editPlayer: (id, player) => dispatch(editPlayer(id, player)),
+    removePlayer: (data) => dispatch(removePlayer(data))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditPlayerPage);

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the header 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="nav-links"
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+      |  
+    <Link
+      replace={false}
+      to="/create"
+    >
+      Add Player!
+    </Link>
+  </div>
+  <h1>
+    Test Header
+  </h1>
+  <h2>
+    Get active after work!
+  </h2>
+</div>
+`;

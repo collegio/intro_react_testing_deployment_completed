@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the EditPlayerPage 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Edit Player
+  </h1>
+  <PlayerForm
+    onSubmit={[Function]}
+    player={
+      Object {
+        "gender": "Male",
+        "id": "2",
+        "message": "Test test test",
+        "name": "Lebron James",
+        "skill_level": "expert",
+        "sport_type": "basketball",
+      }
+    }
+  />
+  <button
+    className="button button-delete"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

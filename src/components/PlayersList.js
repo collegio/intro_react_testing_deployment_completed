@@ -3,14 +3,18 @@ import { connect } from 'react-redux';
 import PlayersListItem from './PlayersListItem';
 import selectPlayers from '../selectors/players';
 
-const PlayersList = (props) => (
+export const PlayersList = (props) => (
     <div className="players-list">
         <h1>Players List</h1>
-        <div className="player-list">
-            {props.players.map((player) => {
-                return <PlayersListItem key={player.id} {...player} />;
-            })}
-        </div>
+        { props.players.length === 0 ? (
+            <p>No players available!</p>
+        ) : (
+            <div className="player-list">
+                {props.players.map((player) => {
+                    return <PlayersListItem key={player.id} {...player} />;
+                })}
+            </div>
+        )}
     </div>
 );
 

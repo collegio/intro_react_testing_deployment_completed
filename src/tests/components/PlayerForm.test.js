@@ -3,8 +3,6 @@ import { shallow } from 'enzyme';
 import PlayerForm from '../../components/PlayerForm';
 import players from '../fixtures/players';
 
-// @TODO: add a mocked up version of Moment.js
-
 test('should render the player form', () => {
     const wrapper = shallow(<PlayerForm />);
     expect(wrapper).toMatchSnapshot();

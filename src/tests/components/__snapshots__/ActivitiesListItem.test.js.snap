@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the activities list item 1`] = `
+<div
+  className="activity"
+>
+  <div
+    className="activity-info"
+  >
+    <p>
+      <[object Object]
+        to="/edit/1"
+      >
+        Evening Walk
+        <br />
+      </[object Object]>
+      walking
+       - 
+      2 km
+    </p>
+    <button
+      className="button button-clear"
+      onClick={[Function]}
+    >
+      Remove
+    </button>
+  </div>
+</div>
+`;

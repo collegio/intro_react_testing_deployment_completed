@@ -5,8 +5,7 @@ test('should setup default filter values', () => {
 
     expect(state).toEqual({
         text: '',
-        sport_type: 'all',
-        skill_level: 'all',
+        activity_type: 'all',
         sort_by: 'name'
     });
 });
@@ -21,45 +20,41 @@ test('should set filter text', () => {
 
     expect(state).toEqual({
         text: testText,
-        sport_type: 'all',
-        skill_level: 'all',
+        activity_type: 'all',
         sort_by: 'name'
     });
 });
 
 test('should set sport type', () => {
-    const testType = 'baseball';
+    const testType = 'walking';
     const action = {
         type: 'SET_FILTER_TYPE',
-        sport_type: testType
+        activity_type: testType
     }
     const state = filtersReducer(undefined, action);
 
     expect(state).toEqual({
         text: '',
-        sport_type: testType,
-        skill_level: 'all',
+        activity_type: testType,
         sort_by: 'name'
     });
 });
 
-test('should set sorting by skill level', () => {
-    const state = filtersReducer(undefined, { type: 'SORT_BY_SKILL' });
+test('should set sorting by distance', () => {
+    const state = filtersReducer(undefined, { type: 'SORT_BY_DISTANCE' });
 
     expect(state).toEqual({
         text: '',
-        sport_type: 'all',
-        skill_level: 'all',
-        sort_by: 'skill_level'
+        activity_type: 'all',
+        sort_by: 'distance'
     });
 });
 
 test('should set sorting by name', () => {
     const curState = {
         text: '',
-        sport_type: 'all',
-        skill_level: 'all',
-        sort_by: 'skill_level'
+        activity_type: 'all',
+        sort_by: 'distance'
     };
     const action = {
         type: 'SORT_BY_NAME'
@@ -68,8 +63,7 @@ test('should set sorting by name', () => {
 
     expect(state).toEqual({
         text: '',
-        sport_type: 'all',
-        skill_level: 'all',
+        activity_type: 'all',
         sort_by: 'name'
     });
 });

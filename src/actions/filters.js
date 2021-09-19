@@ -3,15 +3,15 @@ export const setFilterText = (text = '') => ({
     text
 });
 
-export const setFilterType = (sport_type = 'all') => ({
+export const setFilterType = (activity_type = 'all') => ({
     type: 'SET_FILTER_TYPE',
-    sport_type
+    activity_type
 });
 
 export const sortByName = () => ({
     type: 'SORT_BY_NAME'
 });
 
-export const sortBySkill = () => ({
-    type: 'SORT_BY_SKILL'
+export const sortByDistance = () => ({
+    type: 'SORT_BY_DISTANCE'
 });

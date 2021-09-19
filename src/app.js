@@ -2,9 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import axios from 'axios';
-import { setFilterText } from './actions/filters';
-import { addPlayer } from './actions/players';
-import { getPlayers } from './selectors/players';
+import { addActivity } from './actions/activities';
 import MainRouter from './routes/MainRouter';
 import configStore from './store/configStore';
 import 'normalize.css/normalize.css';
@@ -13,16 +11,16 @@ import './styles/style.scss';
 // create the Redux Store (using our imported store)
 const store = configStore();
 
-// store.dispatch(addPlayer({ name: 'Rob Myers', skill_level: 'basic', 'message': 'I like to have fun' }));
-// store.dispatch(addPlayer({ name: 'Jane Doe', gender: 'Female', skill_level: 'expert', 'message': 'I am here to win.' }));
-// store.dispatch(addPlayer({ name: 'Bill Williamson', sport_type: 'softball', skill_level: 'intermediate', 'message': 'I like to win and have fun!.' }));
+// store.dispatch(addActivity({ name: 'Evening Run', activity_type: 'running', distance: '5 km' }));
+// store.dispatch(addActivity({ name: 'Beach Swim', activity_type: 'swimming', distance: '1 km' }));
+// store.dispatch(addActivity({ name: 'Walk with Dogs', activity_type: 'walking', distance: '2 km' }));
 
-axios.get('http://134.122.113.170/')
-    .then((res) => {
-        res.data.forEach((player) => {
-            store.dispatch(addPlayer(player));
-        });
-    });
+// axios.get('http://206.189.20.69/')
+//     .then((res) => {
+//         res.data.activities.forEach((activity) => {
+//             store.dispatch(addActivity(activity));
+//         });
+//     });
 
 const appTemplate = (
     <Provider store={store}>

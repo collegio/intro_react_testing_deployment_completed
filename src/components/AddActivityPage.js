@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import PlayerForm from './PlayerForm';
-import { addPlayer } from '../actions/players';
+import ActivityForm from './ActivityForm';
+import { addActivity } from '../actions/activities';
 
-export class AddPlayerPage extends React.Component {
+export class AddActivityPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -11,16 +11,16 @@ export class AddPlayerPage extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
-    onSubmit(player) {
-        this.props.addPlayer(player);
+    onSubmit(activity) {
+        this.props.addActivity(activity);
         this.props.history.push('/');
     }
 
     render() {
         return (
             <div className="container">
-                <h1>Add a Player</h1>
-                <PlayerForm 
+                <h1>Add a Activity</h1>
+                <ActivityForm 
                     onSubmit={this.onSubmit}
                 />
             </div>
@@ -29,7 +29,7 @@ export class AddPlayerPage extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    addPlayer: (player) => dispatch(addPlayer(player))
+    addActivity: (activity) => dispatch(addActivity(activity))
 });
 
-export default connect(undefined, mapDispatchToProps)(AddPlayerPage);
+export default connect(undefined, mapDispatchToProps)(AddActivityPage);

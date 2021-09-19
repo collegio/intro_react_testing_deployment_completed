@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the AddPlayerPage 1`] = `
+exports[`should render the AddActivityPage 1`] = `
 <div
   className="container"
 >
   <h1>
-    Add a Player
+    Add a Activity
   </h1>
-  <PlayerForm
+  <ActivityForm
     onSubmit={[Function]}
   />
 </div>

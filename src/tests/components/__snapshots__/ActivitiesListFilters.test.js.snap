@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render the players list filters with alternate filters 1`] = `
+exports[`should render the activities list filters with alternate filters 1`] = `
 <div
-  className="players-list-filters"
+  className="activities-list-filters"
 >
   <h2>
-    Filter Players
+    Filter Activities
   </h2>
   <div
     className="filter-group"
@@ -17,7 +17,7 @@ exports[`should render the players list filters with alternate filters 1`] = `
     <input
       onChange={[Function]}
       type="text"
-      value="Sidney"
+      value="walk"
     />
   </div>
   <div
@@ -36,9 +36,9 @@ exports[`should render the players list filters with alternate filters 1`] = `
         Name
       </option>
       <option
-        value="skill_level"
+        value="distance"
       >
-        Skill Level
+        Distance
       </option>
     </select>
   </div>
@@ -58,36 +58,36 @@ exports[`should render the players list filters with alternate filters 1`] = `
         All
       </option>
       <option
-        value="hockey"
+        value="running"
       >
-        Hockey
+        Running
       </option>
       <option
-        value="baseball"
+        value="walking"
       >
-        Baseball
+        Walking
       </option>
       <option
-        value="softball"
+        value="cycling"
       >
-        Softball
+        Cycling
       </option>
       <option
-        value="basketball"
+        value="swimming"
       >
-        Basketball
+        Swimming
       </option>
     </select>
   </div>
 </div>
 `;
 
-exports[`should render the players list filters with default values 1`] = `
+exports[`should render the activities list filters with default values 1`] = `
 <div
-  className="players-list-filters"
+  className="activities-list-filters"
 >
   <h2>
-    Filter Players
+    Filter Activities
   </h2>
   <div
     className="filter-group"
@@ -118,9 +118,9 @@ exports[`should render the players list filters with default values 1`] = `
         Name
       </option>
       <option
-        value="skill_level"
+        value="distance"
       >
-        Skill Level
+        Distance
       </option>
     </select>
   </div>
@@ -140,24 +140,24 @@ exports[`should render the players list filters with default values 1`] = `
         All
       </option>
       <option
-        value="hockey"
+        value="running"
       >
-        Hockey
+        Running
       </option>
       <option
-        value="baseball"
+        value="walking"
       >
-        Baseball
+        Walking
       </option>
       <option
-        value="softball"
+        value="cycling"
       >
-        Softball
+        Cycling
       </option>
       <option
-        value="basketball"
+        value="swimming"
       >
-        Basketball
+        Swimming
       </option>
     </select>
   </div>

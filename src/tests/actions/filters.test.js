@@ -1,4 +1,4 @@
-import { setFilterText, setFilterType, sortByName, sortBySkill } from '../../actions/filters';
+import { setFilterText, setFilterType, sortByName, sortByDistance } from '../../actions/filters';
 
 test('should set filter text', () => {
     const testText = 'some text';
@@ -15,17 +15,17 @@ test('should set default filter type', () => {
 
     expect(result).toEqual({
         type: 'SET_FILTER_TYPE',
-        sport_type: 'all'
+        activity_type: 'all'
     });
 });
 
 test('should set specified filter type', () => {
-    const testType = 'basketball';
+    const testType = 'running';
     const result = setFilterType(testType);
 
     expect(result).toEqual({
         type: 'SET_FILTER_TYPE',
-        sport_type: testType
+        activity_type: testType
     });
 });
 
@@ -37,10 +37,10 @@ test('should set sorting by name', () => {
     });
 });
 
-test('should set sorting by skill', () => {
-    const result = sortBySkill();
+test('should set sorting by distance', () => {
+    const result = sortByDistance();
 
     expect(result).toEqual({
-        type: 'SORT_BY_SKILL'
+        type: 'SORT_BY_DISTANCE'
     });
 });

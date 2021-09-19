@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from 'redux';
-import playersReducer from '../reducers/players';
+import activitiesReducer from '../reducers/activities';
 import filtersReducer from '../reducers/filters';
 
 export default () => {
     const store = createStore(
         combineReducers({
-            players: playersReducer,
+            activities: activitiesReducer,
             filters: filtersReducer
         })
     );

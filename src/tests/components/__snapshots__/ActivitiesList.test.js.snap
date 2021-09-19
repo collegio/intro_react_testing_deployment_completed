@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the activities list no activities 1`] = `
+<div
+  className="activities-list"
+>
+  <h1>
+    Activities List
+  </h1>
+  <div
+    className="activity-list"
+  />
+</div>
+`;
+
+exports[`should render the activities list with activities 1`] = `
+<div
+  className="activities-list"
+>
+  <h1>
+    Activities List
+  </h1>
+  <div
+    className="activity-list"
+  >
+    <Connect(ActivitiesListItem)
+      activity_type="walking"
+      distance="2 km"
+      id="1"
+      key="1"
+      name="Evening Walk"
+    />
+    <Connect(ActivitiesListItem)
+      activity_type="running"
+      distance="7 km"
+      id="2"
+      key="2"
+      name="Morning Run"
+    />
+    <Connect(ActivitiesListItem)
+      activity_type="cycling"
+      distance="32 km"
+      id="3"
+      key="3"
+      name="Highway Bike Ride"
+    />
+    <Connect(ActivitiesListItem)
+      activity_type="walking"
+      distance="2 km"
+      id="4"
+      key="4"
+      name="Walk with Dogs"
+    />
+    <Connect(ActivitiesListItem)
+      activity_type="swimming"
+      disatnce="1 km"
+      id="5"
+      key="5"
+      name="Beach Swim"
+    />
+  </div>
+</div>
+`;

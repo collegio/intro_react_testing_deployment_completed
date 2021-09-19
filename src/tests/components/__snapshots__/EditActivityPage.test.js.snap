@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the EditActivityPage 1`] = `
+<div
+  className="container"
+>
+  <h1>
+    Edit Activity
+  </h1>
+  <ActivityForm
+    activity={
+      Object {
+        "activity_type": "running",
+        "distance": "7 km",
+        "id": "2",
+        "name": "Morning Run",
+      }
+    }
+    onSubmit={[Function]}
+  />
+  <button
+    className="button button-delete"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</div>
+`;

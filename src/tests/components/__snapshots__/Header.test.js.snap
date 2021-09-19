@@ -5,27 +5,29 @@ exports[`should render the header 1`] = `
   className="header"
 >
   <div
-    className="nav-links"
+    className="container"
   >
-    <Link
-      replace={false}
-      to="/"
+    <div
+      className="nav-links"
     >
-      Home
-    </Link>
-      |  
-    <Link
-      replace={false}
-      to="/create"
-    >
-      Add Player!
-    </Link>
+      <[object Object]
+        to="/"
+      >
+        Home
+      </[object Object]>
+        |  
+      <[object Object]
+        to="/create"
+      >
+        Add Activity!
+      </[object Object]>
+    </div>
+    <h1>
+      Test Header
+    </h1>
+    <h2>
+      Get active after work!
+    </h2>
   </div>
-  <h1>
-    Test Header
-  </h1>
-  <h2>
-    Get active after work!
-  </h2>
 </div>
 `;

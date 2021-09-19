@@ -1,31 +1,31 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PlayersListFilters } from '../../components/PlayersListFilters';
-import { filters, altFilters1, altFilters2 } from '../fixtures/playerFilters';
+import { ActivitiesListFilters } from '../../components/ActivitiesListFilters';
+import { filters, altFilters1, altFilters2 } from '../fixtures/activityFilters';
 
-let setFilterText, setFilterType, sortByName, sortBySkill, wrapper;
+let setFilterText, setFilterType, sortByName, sortByDistance, wrapper;
 
 beforeEach(() => {
     setFilterText = jest.fn();
     setFilterType = jest.fn();
     sortByName = jest.fn();
-    sortBySkill = jest.fn();
+    sortByDistance = jest.fn();
     wrapper = shallow(
-        <PlayersListFilters 
+        <ActivitiesListFilters 
             filters={filters} 
             setFilterText={setFilterText}
             setFilterType={setFilterType}
             sortByName={sortByName}
-            sortBySkill={sortBySkill}
+            sortByDistance={sortByDistance}
         />
     );
 })
 
-test('should render the players list filters with default values', () => {
+test('should render the activities list filters with default values', () => {
     expect(wrapper).toMatchSnapshot();
 });
 
-test('should render the players list filters with alternate filters', () => {
+test('should render the activities list filters with alternate filters', () => {
     wrapper.setProps({ filters: altFilters1 });
     expect(wrapper).toMatchSnapshot();
 });
@@ -38,20 +38,20 @@ test('should handle filter text changes', () => {
     expect(setFilterText).toHaveBeenLastCalledWith(value);
 });
 
-test('should handle sport type select changes', () => {
-    const value = "baseball";
+test('should handle activity type select changes', () => {
+    const value = "cycling";
     wrapper.find('select').at(1).simulate('change', {
         target: { value }
     });
     expect(setFilterType).toHaveBeenLastCalledWith(value);
 });
 
-test('should set sorting by skill level', () => {
-    const value = 'skill_level';
+test('should set sorting by distance', () => {
+    const value = 'distance';
     wrapper.find('select').at(0).simulate('change', {
         target: {value}
     });
-    expect(sortBySkill).toHaveBeenCalled();
+    expect(sortByDistance).toHaveBeenCalled();
 });
 
 test('should set sorting by name', () => {

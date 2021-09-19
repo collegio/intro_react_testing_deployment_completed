@@ -51,7 +51,7 @@ module.exports = (env) => {
         plugins: [
             CSSExtract
         ],
-        devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+        devtool: isProduction ? 'source-map' : 'eval-cheap-module-source-map',
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true

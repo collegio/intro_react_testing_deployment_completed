@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setFilterText, setFilterType, sortByName, sortBySkill } from '../actions/filters';
+import { setFilterText, setFilterType, sortByName, sortByDistance } from '../actions/filters';
 
-export class PlayersListFilters extends React.Component {
+export class ActivitiesListFilters extends React.Component {
 
     constructor(props) {
         super(props);
 
         this.onTextChange = this.onTextChange.bind(this);
         this.onSortChange = this.onSortChange.bind(this);
-        this.onSportTypeChange = this.onSportTypeChange.bind(this);
+        this.onActivityTypeChange = this.onActivityTypeChange.bind(this);
     }
 
     onTextChange(e) {
@@ -20,19 +20,19 @@ export class PlayersListFilters extends React.Component {
         if (e.target.value === "name") {
             this.props.sortByName();
         }
-        else if (e.target.value === "skill_level") {
-            this.props.sortBySkill();
+        else if (e.target.value === "distance") {
+            this.props.sortByDistance();
         }
     }
 
-    onSportTypeChange(e) {
+    onActivityTypeChange(e) {
         this.props.setFilterType(e.target.value);
     }
 
     render() {
         return (
-            <div className="players-list-filters">
-                <h2>Filter Players</h2>
+            <div className="activities-list-filters">
+                <h2>Filter Activities</h2>
                 <div className="filter-group">
                     <label>Search For:</label><br />
                     <input type="text" value={this.props.filters.text} onChange={this.onTextChange} />
@@ -41,17 +41,17 @@ export class PlayersListFilters extends React.Component {
                     <label>Sort By:</label><br />
                     <select onChange={this.onSortChange}>
                         <option value="name">Name</option>
-                        <option value="skill_level">Skill Level</option>
+                        <option value="distance">Distance</option>
                     </select>
                 </div>
                 <div className="filter-group">
                     <label>Sport Type:</label><br />
-                    <select onChange={this.onSportTypeChange}>
+                    <select onChange={this.onActivityTypeChange}>
                         <option value="all">All</option>
-                        <option value="hockey">Hockey</option>
-                        <option value="baseball">Baseball</option>
-                        <option value="softball">Softball</option>
-                        <option value="basketball">Basketball</option>
+                        <option value="running">Running</option>
+                        <option value="walking">Walking</option>
+                        <option value="cycling">Cycling</option>
+                        <option value="swimming">Swimming</option>
                     </select>
                 </div>
             </div>
@@ -68,10 +68,10 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         setFilterText: (text) => dispatch(setFilterText(text)),
-        setFilterType: (sport_type) => dispatch(setFilterType(sport_type)),
+        setFilterType: (activity_type) => dispatch(setFilterType(activity_type)),
         sortByName: () => dispatch(sortByName()),
-        sortBySkill: () => dispatch(sortBySkill()),
+        sortByDistance: () => dispatch(sortByDistance()),
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PlayersListFilters);
+export default connect(mapStateToProps, mapDispatchToProps)(ActivitiesListFilters);
